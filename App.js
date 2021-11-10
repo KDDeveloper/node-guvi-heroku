@@ -5,7 +5,7 @@ const usersRoutes = require("./Route/users.route");
 const userRegisterRoutes = require ("./Route/userRegister.route")
 const mongo = require("./mongo");
 const jwt = require("jsonwebtoken");
-// const port= process.env.port;
+const port= 3001;
 const app = express();
 
 
@@ -58,7 +58,7 @@ app.use('/users', usersRoutes);
 
 
 
-app.listen(process.env.PORT,()=>{console.log(`server is running at post:${process.env.PORT}`)});
+app.listen(process.env.PORT||port,()=>{console.log(`server is running at post:${process.env.PORT}`)});
 } 
 catch(err){
   console.log("Error starting Server",err)
