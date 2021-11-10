@@ -5,7 +5,7 @@ const usersRoutes = require("./Route/users.route");
 const userRegisterRoutes = require ("./Route/userRegister.route")
 const mongo = require("./mongo");
 const jwt = require("jsonwebtoken");
-const port= 3001;
+const port= process.env.port||3001;
 const app = express();
 
 
