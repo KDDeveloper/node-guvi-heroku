@@ -1,8 +1,10 @@
 const {MongoClient} = require("mongodb");
 
 
-const mongo_url = "mongodb://localhost:27017";
-const mongo_name = "guvi_post"
+const mongo_url = process.env.MONGO_URL;
+//       "mongodb://localhost:27017";
+const mongo_name = process.env.MONGO_NAME;
+//       "guvi_post"
 const client = new MongoClient(mongo_url);
 
 const mongo = {
