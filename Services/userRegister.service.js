@@ -39,7 +39,7 @@ const service = {
                     return res.status(403).send({Error:"The email or password is incorrect"})
                 }
 
-                const authToken= jwt.sign({userId:user._id, email: user.email},"gUV!",{expiresIn:"10d"})
+                const authToken= jwt.sign({userId:user._id, email: user.email},process.env.jwt_ps,{expiresIn:"10d"})
                 // console.log(token);
                 res.send({authToken})
             } catch(err){
