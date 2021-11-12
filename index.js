@@ -1,3 +1,5 @@
+require("dotenv").config();
+const cors = require("cors");
 const express = require("express");
 // import * as express from 'express';
 const postRoutes = require("./Route/posts.route");
@@ -16,9 +18,9 @@ const app = express();
   //MongoBD connect
  await mongo.connect()
 
-app.use(express.json())
+app.use(express.json());
 
-
+app,.use(cors());
 
 app.use((req, res, next)=>{
     console.log(" common middleware Called!")
