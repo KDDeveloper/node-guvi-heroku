@@ -1,5 +1,5 @@
 const express = require("express");
-import * as express from 'express';
+// import * as express from 'express';
 const postRoutes = require("./Route/posts.route");
 const usersRoutes = require("./Route/users.route");
 const userRegisterRoutes = require ("./Route/userRegister.route")
