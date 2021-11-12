@@ -58,7 +58,7 @@ app.use('/users', usersRoutes);
 
 
 
-app.listen(process.env.PORT||port,()=>{console.log(`server is running at post:${process.env.PORT}`)});
+app.listen(process.env.PORT||5000,()=>{console.log(`server is running at post:${process.env.PORT}`)});
 } 
 catch(err){
   console.log("Error starting Server",err)
