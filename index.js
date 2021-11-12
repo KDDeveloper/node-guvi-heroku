@@ -32,7 +32,7 @@ app.use((req,res,next)=>{
   if(token){
     //const user = await mongo.users.findOne({ email: req.body.email });
     try{
-    req.user= jwt.verify(token,"gUV!");
+    req.user= jwt.verify(token,process.env.jwt_ps);
     // console.log(user);
     next();
     
